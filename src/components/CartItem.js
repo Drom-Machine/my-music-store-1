@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeItemFromCart_Action } from '../reduxStore';
+import { removeItemgitFromCart_Action } from '../reduxStore';
 
 const CartItem = (props) => {
 
