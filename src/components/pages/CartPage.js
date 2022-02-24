@@ -5,9 +5,12 @@ import Button from '@mui/material/Button';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { emptyCartAction } from '../../reduxStore/shoppingCartState';
+import { emptyCart_Action } from '../../reduxStore';
 import CartItem from '../CartItem';
 import Layout from '../layout/Layout';
+
+
+
 
 const CartPage = (props) => {
   const shoppingCart = useSelector(state => state.shoppingCart);
@@ -19,7 +22,7 @@ const CartPage = (props) => {
   const dispatch = useDispatch();
 
   const emptyShoppingCart = () => {
-    dispatch({type: emptyCartAction})
+    dispatch({type: emptyCart_Action})
   }
 
   return (
