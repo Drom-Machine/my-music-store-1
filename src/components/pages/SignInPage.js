@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUser } from '../../fetchData';
-import { signInActionCreator } from '../../reduxStore/userState';
+import { signIn_ACTION } from '../../reduxStore';
 import Layout from '../layout/Layout';
 
 const SignInPage = () => {
@@ -13,7 +13,7 @@ const SignInPage = () => {
   const handleUserLogIn = () => fetchUser('fake@user.com', '123')
   //Put the data on redux
   .then((data) => {
-    dispatch(signInActionCreator(data))
+    dispatch(signIn_ACTION(data))
   });
   
   if(user){
