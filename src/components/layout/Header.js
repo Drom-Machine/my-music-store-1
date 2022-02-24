@@ -25,16 +25,19 @@ const Header = () => {
               </Typography>
             </Link>
           </Box>
-          {/* IF user is logged in show "hi, <user.firstName>" instead */}
-          { 
-            user
-              ? `Hi, ${user.firstName}`
-              : (
-                <Link to="/sign-in">
-                  <Button color="inherit">Sign in</Button>
-                </Link > 
+
+          
+          {
+            user? 
+              <h3>Hollar, {user.username}</h3>
+              : ( 
+              <Link to="/sign-in">
+                <Button color="inherit">Sign in</Button>
+              </Link >
               )
           }
+
+
         <Link to="/cart">
           <IconButton
             size="large"
@@ -43,6 +46,7 @@ const Header = () => {
             aria-label="menu"
             sx={{ ml: 1 }}
           >
+          
             <ShoppingCartIcon />
           </IconButton>
         </Link >
