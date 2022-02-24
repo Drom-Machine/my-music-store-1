@@ -43,37 +43,37 @@ export const fetchProducts = () => new Promise((resolve, reject) => {
           resolve(fakeProductData)
       } catch (error) {
           reject(error);
+
       }
   }, 1000);
 });
 
-//    Lab: using the mock fetch user function provided,
-//    store the user in the redux store and access that
-//    data from the header to show the user first name.
 
-// - dispatch an action with the user data after the "server" returns the user data.
-//     since we are now dispatching we need a reducer that can read that action and change the state accordingly.
-// - Create a reducer function to handle the user part of the redux state.
-// - give that reducer to redux so that redux can call/run it every time an action is dispatched. (pass the reducer to redux where you create the redux store so that redux can call it)
 
-// - In the header component use the 'useSelector()' hook to grab the userdata from the redux store and diplay it.
+//----------------------------------------------------------------Lab Assignment 
 
 const fakeUserData = {
   id: '001',
-  email: 'fake@user.com',
-  firstName: 'Peter',
-  lastName: 'Parker',
-};
+  email: 'phony@yahoo.com',
+  firstName: 'Fanny',
+  lastName: 'Pac',
+  userName: 'FannyPac11'
+}
 
-// Function that simulates making a network request to fetch products
-export const fetchUser = (email, password) => new Promise((resolve, reject) => {
+
+
+
+export const fetchUser = (email, password) => new Promise ((resolve, reject) => {
   console.log('fetching Data from imaginary products database')
   setTimeout(() => {
-      try {
-          // fetchingData from imaginary database
-          resolve(fakeUserData)
-      } catch (error) {
-          reject(error);
-      }
+    try {
+      // fetching Data from imaginary database
+      resolve(fakeUserData)
+    } catch (error) {
+      reject(error);
+    }
+    
   }, 1000);
 });
+
+
